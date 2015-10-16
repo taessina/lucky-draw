@@ -29,7 +29,7 @@
       var nextTime = 100;
       var winHeight = $(window).height();
       $('.rolling-list').css({
-        'height': winHeight,
+        'height': winHeight - 60,
         'width': '100%'
       });
       $('.rolling-list li').css({
