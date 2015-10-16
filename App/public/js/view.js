@@ -10,6 +10,8 @@
     $('.main-container').addClass('hide');
     $('#rolling-view-container').addClass('show animated fadeInDown');
     $('.span_1_of_3').addClass('hide');
+    $('#mask-top').removeClass('hide');
+    $('#mask-bottom').removeClass('hide');
 
     var itemsArr = [];
     var $items = $('.item-list li').clone().each(function(i, v){
@@ -18,7 +20,7 @@
     function loopAndLoop(counter) {
       // this is not animation...
       var $rolling = $('ul.rolling-list');
-      var newItemsOrder = itemsArr.slice((counter - 4) % $items.length).concat(itemsArr.slice(0, (counter - 4) % $items.length));
+      var newItemsOrder = itemsArr.slice((counter - 3) % $items.length).concat(itemsArr.slice(0, (counter - 3) % $items.length));
       $rolling.empty();
       for (var i = 0; i < newItemsOrder.length; i++) {
         $rolling.append(newItemsOrder[i]);
@@ -31,12 +33,12 @@
         'width': '100%'
       });
       $('.rolling-list li').css({
-        'font-size': winHeight/150 + 'em',
+        'font-size': winHeight/140 + 'em',
         'margin-top': '10px',
         'white-space': 'nowrap'
       });
       $('.mask').css({
-        'height': winHeight/2.6
+        'height': winHeight/2.2
       });
 
       if (counter > $items.length) {
@@ -49,6 +51,8 @@
             $('.main-container').removeClass('show animated fadeOutUp');
             $('.main-container').addClass('hide');
             $('#result-view-container').addClass('show animated fadeInDown');
+            $('#mask-top').addClass('hide');
+            $('#mask-bottom').addClass('hide');
           }, 1000);
           return;
         } else if ($($items.get((counter+1) % $items.length)).prop('id') == poorMan) {
@@ -137,7 +141,7 @@
 
       //Result View
       $('.winner').css({
-        'font-size': winHeight/100 + 'em',
+        'font-size': winHeight/140 + 'em',
         'margin-top': winHeight/3.5
       });
       $('#result-view-container .btn-start').css({
