@@ -26,7 +26,7 @@
         $rolling.append(newItemsOrder[i]);
       }
 
-      var nextTime = 100;
+      var nextTime = 50;
       var winHeight = $(window).height();
       $('.rolling-list').css({
         'height': winHeight - 60,
