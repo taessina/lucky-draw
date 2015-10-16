@@ -1,6 +1,7 @@
 var express = require('express'),
     router = express.Router(),
-    candidates = require('../conf').preloadCandidates,
+    fs = require('fs'),
+    candidates = fs.readFileSync('candidates.txt').toString().split('\n'),
     isWithoutReplacement = false,
     _ = require('lodash'),
     io = require('../lib/io');
@@ -34,9 +35,13 @@ router.post('/setWithReplacement', function(req, res) {
 });
 
 router.get('/rand', function(req, res) {
+  console.log(candidates.length);
     var randomNumber = _.random(candidates.length - 1),
         poorMan = candidates[randomNumber];
     io.emitRandResult(poorMan);
+
+    isWithoutReplacement = true;
+
     if (isWithoutReplacement) {
         candidates = _.without(candidates, poorMan);
         boardcastCandidates();
