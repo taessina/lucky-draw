@@ -4426,6 +4426,21 @@ input[type="checkbox"] {
     width: 83px;
     height: 83px; }
 
+.logo-right {
+  margin: 10px 20px 0 0;
+  -vendor-animation-duration: .5s;
+  -vendor-animation-delay: 1s;
+  -vendor-animation-iteration-count: infinite;
+  z-index: 999;
+  width: 91px;
+  height: 91px;
+  top: 0px;
+  right: 0px;
+  position: fixed; }
+  .logo-right img {
+    width: 120px;
+    height: 83px; }
+
 .main-container {
   -vendor-animation-duration: .5s;
   -vendor-animation-delay: 3s;
