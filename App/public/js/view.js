@@ -182,6 +182,12 @@
             $(this).children('.text').removeClass('hide flipOutX');
             $(this).children('.text').addClass('show flipInX');
         });
+        $('.btn-start').mouseleave(function(){
+            $(this).children('.text').removeClass('show flipInX');
+            $(this).children('.text').addClass('hide flipOutX');
+            $(this).children('.fa-compass').removeClass('hide rotateOut');
+            $(this).children('.fa-compass').addClass('show');
+        });
 
     });
 })(jQuery, window, document);

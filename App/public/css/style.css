@@ -4234,7 +4234,7 @@ Copyright (c) 2013 Daniel Eden
 
 body {
   font-family: 'PT Sans', helvetica, Arial, verdana, sans-serif;
-  background: #f34433 url("../images/bg_stars.svg") no-repeat top left;
+  background: #f34433 url("../images/flo-bg-small.png") no-repeat top left;
   font-size: 18px;
   line-height: 1;
   margin: 0;
@@ -4416,16 +4416,11 @@ input[type="checkbox"] {
   -vendor-animation-duration: .5s;
   -vendor-animation-delay: 1s;
   -vendor-animation-iteration-count: infinite;
-  width: 224px;
+  width: 91px;
   height: 91px; }
   .logo img {
-    width: 205px;
+    width: 83px;
     height: 83px; }
-  .logo :hover {
-    cursor: pointer; }
-  .logo .tooltip {
-    left: 140px;
-    top: 0; }
 
 .main-container {
   -vendor-animation-duration: .5s;
